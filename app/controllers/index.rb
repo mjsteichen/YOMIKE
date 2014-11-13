@@ -43,5 +43,7 @@ get '/logout' do
 end
 
 post '/text_mike' do
-  'API MAGIC WOWO WOWWWOWOWOWO ZOMG'
+  @user = User.find(session[:user_id])
+  send_text(@user.full_name)
+  redirect "/users/#{@user.id}"
 end
