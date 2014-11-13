@@ -1,0 +1,18 @@
+<div id= "container">
+  <h1>Sign In</h1>
+
+  <% if @errors %>
+    <div class="errors"><%= @errors %></div>
+  <% end %>
+  <br>
+  <form id="sign-in" method="post" action="/sessions">
+    <label class="label" for="email">Email</label>
+    <input type="text" name="email" placeholder="e.g.joe@joe.com"><br>
+    <label class="label" for="password">Password</label>
+    <input type="password" name="password">
+    <br>
+    <div class="submit"><input type="submit" value="Sign In"></div>
+  </form>
+
+  <a href="/signup">Sign Up</a>
+</div>
