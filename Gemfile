@@ -7,7 +7,7 @@ gem 'pg'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
-
+gem 'twilio-ruby'
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
 gem 'bcrypt'
