@@ -3,6 +3,10 @@
 
   <a href="/logout">Log Out</a>
 
+   <% if @message %>
+    <div class="messages"><%= @message %></div>
+  <% end %>
+
   <form method= 'POST' action= '/text_mike'>
     <input type= "submit" value= "Yo, Mike, Make Me Some Coffee!">
   </form>

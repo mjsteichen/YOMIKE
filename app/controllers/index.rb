@@ -45,5 +45,6 @@ end
 post '/text_mike' do
   @user = User.find(session[:user_id])
   send_text(@user.full_name)
-  redirect "/users/#{@user.id}"
+  @message = 'Sent the message'
+  erb :user_home
 end
