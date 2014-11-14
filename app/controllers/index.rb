@@ -11,7 +11,6 @@ end
 
 post '/sessions' do
   @user = User.authenticate(params[:email], params[:password])
-  # binding.pry
   if @user
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
@@ -46,6 +45,4 @@ post '/text_mike' do
   @user = User.find(session[:user_id])
   send_text(@user.full_name)
   redirect "/users/#{@user.id}"
-  # @message = 'Sent the message'
-  # erb :user_home
 end
