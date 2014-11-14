@@ -1,19 +1,24 @@
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900' rel='stylesheet' type='text/css'>
+<header>
+  <h1>YOMIKE!</h1>
+</header>
 <div class="container">
   <h1>Sign Up</h1>
+  <br>
 
   <% if @errors %>
     <div class="errors"><%= @errors %></div>
   <% end %>
 
   <form method="post" action="/users">
-    <label for="full_name">Full Name:</label>
+    <label for="full_name"><span id="name">Full Name:</span></label>
     <input type="text" name="full_name" placeholder="Jill Smith" >
     <span id="name-errors" class="errors"></span>
     <br>
-    <label for="email">Email:</label>
+    <label for="email"><span id="email">Email:</span></label>
     <input type="email" name="email" placeholder="e.g., me@example.com">
     <br>
-    <label for="password">Password:</label>
+    <label for="password"><span id="password">Password:</span></label>
     <input type="password" name="password" placeholder="6 or more characters">
     <br>
     <label for="phone_number">Phone Number:</label>
