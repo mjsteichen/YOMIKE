@@ -1,4 +1,8 @@
-<div id= "container">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900' rel='stylesheet' type='text/css'>
+<header>
+  <h1>YOMIKE!</h1>
+</header>
+<div class= "container">
   <h1>Welcome, <%=@user.full_name%></h1>
 
   <a href="/logout">Log Out</a>
@@ -6,8 +10,15 @@
    <% if @message %>
     <div class="messages"><%= @message %></div>
   <% end %>
+  <br>
+  <br>
 
   <form method= 'POST' action= '/text_mike'>
-    <input type= "submit" value= "Yo, Mike, Make Me Some Coffee!">
+    <input id= "coffee_button" type= "submit" value= "Yo, Mike, Make   Me Some Coffee!*">
   </form>
+  <br>
+<div id="footer">
+  *By pushing this button, the user agrees to the following terms and conditions: 1) Pushing the button does not guarantee that coffee will be made in a timely manner, or ever. 2) Your use of the Services includes the ability to enter into agreements and/or to make transactions electronically. YOU ACKNOWLEDGE THAT YOUR ELECTRONIC SUBMISSIONS CONSTITUTE YOUR AGREEMENT AND INTENT TO BE BOUND BY AND TO PAY FOR SUCH AGREEMENTS AND TRANSACTIONS. YOUR AGREEMENT AND INTENT TO BE BOUND BY ELECTRONIC SUBMISSIONS APPLIES TO ALL RECORDS RELATING TO ALL TRANSACTIONS YOU ENTER INTO ZOMG WHOAOAOAOAHWHOAAAWOWOWEEEE JUST KIDDIN YALL NO NEED TO KEEP READING THIS IS A JOKE. EVERYTHING. PROMISE. ON THIS SITE, INCLUDING NOTICES OF CANCELLATION, POLICIES, CONTRACTS, AND APPLICATIONS. In order to access and retain your electronic records, you may be required to have certain hardware and software, which are your sole responsibility.
+</div>
+
 </div>

@@ -1,18 +1,21 @@
-<div id= "container">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900' rel='stylesheet' type='text/css'>
+<header>
+  <h1>YOMIKE!</h1>
+</header>
+<div class= "container">
   <h1>Sign In</h1>
+  <a href="/signup">Sign Up</a>
 
   <% if @errors %>
     <div class="errors"><%= @errors %></div>
   <% end %>
   <br>
   <form id="sign-in" method="post" action="/sessions">
-    <label class="label" for="email">Email</label>
-    <input type="text" name="email" placeholder="e.g.joe@joe.com"><br>
-    <label class="label" for="password">Password</label>
-    <input type="password" name="password">
-    <br>
-    <div class="submit"><input type="submit" value="Sign In"></div>
+<!--     <label class="label" for="email">Email</label> -->
+    <input type="text" name="email" placeholder="e.g.joe@joe.com">
+<!--     <label class="label" for="password">Password</label> -->
+    <input type="password" name="password" placeholder="password">
+    <input class="submit" type ="submit" value="Sign In">
   </form>
 
-  <a href="/signup">Sign Up</a>
 </div>
